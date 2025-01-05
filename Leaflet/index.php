@@ -1,0 +1,11 @@
+<?php
+    session_start();
+    if(isset($_SESSION['username'])){
+        header("location:homePage.php");
+    }
+    else{
+        if(!isset($_SESSION['username'])){
+            header("location:landingpage.php");
+        }
+    }
+?>
